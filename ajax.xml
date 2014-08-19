@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogue>
+  <formation>
+    <titre>XHTML et CSS</titre>
+    <formateur>Florent Verschelde</formateur>
+    <categorie>Web</categorie>
+    <annee>2008</annee>
+  </formation>
+  <formation>
+    <titre>SketchUp</titre>
+    <formateur>Laurent Brixius</formateur>
+    <categorie>3D</categorie>
+    <annee>2010</annee>
+  </formation>
+  <formation>
+    <titre>Photoshop Elements</titre>
+    <formateur>Vincent Risacher</formateur>
+    <categorie>Graphisme</categorie>
+    <annee>2010</annee>
+  </formation>
+</catalogue>

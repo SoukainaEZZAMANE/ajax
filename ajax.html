@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<title>Apprendre jQuery</title>
+</head>
+<body>
+
+	<div id="debug"></div>
+	
+	<div id="wrap">
+
+	<h1>Apprendre jQuery</h1>
+	
+	<h2>Ajax</h2>
+	
+	<p>
+		Login : <input type="text" id="login" name="login" /><br />
+		Mot de passe : <input type="password" id="password" name="password" />
+	</p>
+	
+	<p>
+		<input type="button" id="load" value="load()" />
+		<input type="button" id="load-param" value="load() avec paramètres" />
+		<input type="button" id="ajax-html" value="$.ajax html" />
+		<input type="button" id="ajax-post" value="$.post text" />
+		<input type="button" id="ajax-get" value="$.get xml" />
+		<input type="button" id="ajax-json" value="$.getJSON avec Flickr" />
+	</p>
+	
+	<div id="resultat"></div>
+	
+	</div> <!-- fin de #wrap -->
+
+<script src="jquery.js" type="text/javascript"></script>
+<script src="ajax.js" type="text/javascript"></script>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<!-- Scope permet de faire la liasion ente la vue et le controller -->
+<html>
+    <head>
+        <title>Controller_Scope</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        <input type="text" ng-model="query" />
+        
+        <select ng-model="order" >
+            <option value="username" >Organiser par nom</option>
+            <option value="content"> Organiser par contenu </option>
+        </select>
+        
+        <div ng-controller="CommentsCtrl" >
+            <div ng-repeat=" commentaire in comments | filter : {content : query} | orderBy : order">
+                <p> <strong> {{commentaire.username}}</strong></br>
+                {{commentaire.content}}
+                </p>
+                
+            </div>
+        </div>
+        
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+    
+        <script type="text/javascript">
+            console.log(scope);
+            function CommentsCtrl(scope){
+                $scope.comments= [
+                    {
+                      "username": "Laverne",
+                      "city": "Yukon",
+                      "email": "fostermedina@xleen.com",
+                      "content": "Tempor ut amet est culpa laboris amet cupidatat cupidatat est culpa tempor ut ex. Cupidatat consectetur quis proident laborum exercitation ea laborum reprehenderit. Commodo irure aliquip proident in labore mollit eu. Cupidatat minim ad consequat Lorem esse nostrud aliquip officia occaecat excepteur id exercitation cupidatat do. Do ut duis in deserunt veniam."
+                    },
+                    {
+                      "username": "Joyner",
+                      "city": "Grapeview",
+                      "email": "mariebond@talendula.com",
+                      "content": "Amet voluptate veniam adipisicing aute sit ullamco nulla incididunt ut exercitation cillum sit elit. Aute dolore eu tempor occaecat exercitation aliquip sunt anim sit dolore velit eiusmod. Incididunt laborum eu quis do magna esse voluptate. Eu consectetur officia sit aliqua ea. Qui non enim Lorem culpa labore anim Lorem laborum in nisi occaecat."
+                    },
+                    {
+                      "username": "Marjorie",
+                      "city": "Rockbridge",
+                      "email": "padillanoel@optique.com",
+                      "content": "Laborum est aliquip quis anim ipsum reprehenderit enim nulla eu id voluptate quis quis. Pariatur nostrud esse ex esse sunt duis. Irure enim ullamco voluptate dolore nulla reprehenderit ullamco commodo ut mollit elit eiusmod ipsum. Deserunt nisi dolore laboris mollit esse Lorem do ea mollit laboris in sit id est. Et laborum duis amet consequat ut proident aliquip ut consectetur consequat."
+                    },
+                    {
+                      "username": "Tate",
+                      "city": "Spokane",
+                      "email": "robbinspate@ovation.com",
+                      "content": "Lorem commodo sunt occaecat deserunt qui ad incididunt nostrud amet irure quis eu. Voluptate do nostrud eiusmod nostrud fugiat elit est qui ex ad eu do fugiat. Officia eu fugiat dolor ipsum elit commodo dolore nulla. Pariatur commodo id deserunt laborum ex commodo reprehenderit elit Lorem Lorem deserunt ut. Dolore elit est anim eiusmod excepteur id ea ex adipisicing est."
+                    },
+                    {
+                      "username": "Keisha",
+                      "city": "Cetronia",
+                      "email": "jewelunderwood@unisure.com",
+                      "content": "Lorem fugiat anim occaecat cupidatat nulla et ullamco esse ipsum consectetur ea Lorem do. Esse aliqua deserunt tempor consectetur ut nisi dolore nulla fugiat non amet. Aliqua labore dolor excepteur tempor fugiat sunt nostrud dolor cillum laborum aliqua Lorem fugiat eu. Commodo ipsum nostrud consectetur culpa labore veniam enim ullamco adipisicing mollit. Laboris nisi labore cillum fugiat non veniam aute reprehenderit eiusmod ipsum."
+                    }
+                  ];
+            }
+        </script>
+    
+    </body>
+</html>
